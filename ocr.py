@@ -49,8 +49,9 @@ def ocr_function(filename):
             for line in text_result.lines:
                 print(line.text)
                 txt += line.text
-                
-    message += extract_products(txt)
+    
+    #extract_products returns a list of all products that have been found on the receipt
+    message += str(extract_products(txt))
 
     return message
 
