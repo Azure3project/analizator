@@ -4,6 +4,7 @@ import time
 from azure.cognitiveservices.vision.computervision import ComputerVisionClient
 from azure.cognitiveservices.vision.computervision.models import OperationStatusCodes
 from msrest.authentication import CognitiveServicesCredentials
+from extracting import extract_products
 
 '''
 Authenticate
@@ -40,13 +41,16 @@ def ocr_function(filename):
         if read_result.status not in ['notStarted', 'running']:
             break
         time.sleep(1)
-
+    
+    txt = ''
     # Print the detected text, line by line
     if read_result.status == OperationStatusCodes.succeeded:
         for text_result in read_result.analyze_result.read_results:
             for line in text_result.lines:
                 print(line.text)
-                message += line.text + '\n'
+                txt += line.text
+                
+    message += extract_products(txt)
 
     return message
 
