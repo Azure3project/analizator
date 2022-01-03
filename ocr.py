@@ -32,7 +32,7 @@ def ocr_function(filename):
     # Grab the ID from the URL
     operation_id = read_operation_location.split("/")[-1]
 
-    message = "ocr działa!!"
+    message = "ocr działa!!\n"
 
     # Call the "GET" API and wait for it to retrieve the results
     while True:
@@ -46,6 +46,7 @@ def ocr_function(filename):
         for text_result in read_result.analyze_result.read_results:
             for line in text_result.lines:
                 print(line.text)
+                message += line.text + '\n'
 
     return message
 
