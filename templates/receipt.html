@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="pl-PL">
+<html lang="en">
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -10,16 +10,16 @@
 
     <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
 
-    <title>Paragon</title>
+    <title>Add a new receipt</title>
 </head>
 <body>
     <main>
-        <div class="analiza">
+        <div class="analyzer">
             <div class="container-fluid d-flex align-items-center justify-content-center my-auto min-vh-100">
-                <div class="center-box border border-4 border-secondary col-9">
+                <div class="center-box border border-5 border-warning col-9">
                     <div class="row">
                         <header>
-                            <h1 class="text-center">Przeanalizuj paragon swoich zakupów</h1>
+                            <h1 class="text-center">What did you buy?</h1>
                         </header>
                     </div>
                     <div class="row d-flex justify-content-center">
@@ -27,35 +27,31 @@
                             {% if filename %}
                                 <img class="img-fluid" src="{{ url_for('display_image', filename=filename) }}">
                             {% else %}
-                                <img class="img-fluid" src="{{ url_for('static',filename='images/koszyk.jpg') }}" atl="piesek"/>
+                                <img class="img-fluid" src="{{ url_for('static',filename='images/basket.jpg') }}"/>
                             {% endif %}
 
                             <form method="POST" action="" enctype="multipart/form-data">
                                 <p><input class="btn upload btn-outline-secondary btn-block" type="file" name="file"></p>
-                                <p><input class="btn  submit btn-primary btn-block" type="submit" value="Sprawdź"></p>
+                                <p><input class="btn submit btn-warning btn-block" type="submit" value="Check"></p>
                             </form>
                         </div>
                         <div class="col-7 result">
-                            <div class="adnotacje">
                                 {% with messages = get_flashed_messages() %}
                                 {% if messages %}
                                     {% for message in messages %}
-                                    {{ message }}
+                                        <div class="alert alert-info">
+                                            {{ message }}
+                                        </div>
                                     {% endfor %}
                                 {% endif %}
                                 {% endwith %}
-                                <h3>Wynik analizy:</h3>
-
-                            </div>
-                                    <h4> {{ message }} </h4>
-
+                            <h4> {{ message }} </h4>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </main>
-
 
 <!-- Optional JavaScript; -->
 <!-- Option 1: Bootstrap Bundle with Popper -->

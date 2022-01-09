@@ -15,7 +15,6 @@ subscription_key = '1dab45a2c1ad4a009592ff99c6786e86'
 endpoint = 'https://project3-analizator-paragonow.cognitiveservices.azure.com/'
 
 
-
 def ocr_function(filename):
     computervision_client = ComputerVisionClient(endpoint, CognitiveServicesCredentials(subscription_key))
     print("===== Read File - remote =====")
@@ -33,7 +32,7 @@ def ocr_function(filename):
     # Grab the ID from the URL
     operation_id = read_operation_location.split("/")[-1]
 
-    message = "ocr działa!!\n"
+    message = "You bought: "
 
     # Call the "GET" API and wait for it to retrieve the results
     while True:
@@ -41,7 +40,7 @@ def ocr_function(filename):
         if read_result.status not in ['notStarted', 'running']:
             break
         time.sleep(1)
-    
+
     txt = ''
     # Print the detected text, line by line
     if read_result.status == OperationStatusCodes.succeeded:
@@ -49,8 +48,8 @@ def ocr_function(filename):
             for line in text_result.lines:
                 print(line.text)
                 txt += line.text
-    
-    #extract_products returns a list of all products that have been found on the receipt
+
+    # extract_products returns a list of all products that have been found on the receipt
     message += str(extract_products(txt))
 
     return message

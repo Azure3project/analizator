@@ -1,4 +1,3 @@
-import os
 from ocr import *
 from flask import Flask, flash, request, redirect, url_for, render_template
 from werkzeug.utils import secure_filename
@@ -14,31 +13,42 @@ init_extracting()
 
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
 
+
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 
 @app.route('/')
-def upload_form():
-    return render_template('index.html')
+@app.route('/home')
+def home():
+    return render_template('home.html')
 
 
-@app.route('/', methods=['POST'])
+@app.route('/receipt')
+def new_receipt():
+    return render_template('receipt.html')
+
+
+@app.route('/fridge', methods=['POST', 'GET'])
+def my_fridge():
+    return render_template('fridge.html')
+
+
+@app.route('/receipt', methods=['POST'])
 def upload_image():
     if 'file' not in request.files:
-        flash('No file part')
+        flash('No file part!')
         return redirect(request.url)
     file = request.files['file']
     if file.filename == '':
-        flash('No image selected for uploading')
+        flash('No image selected for uploading!')
         return redirect(request.url)
     if file and allowed_file(file.filename):
         filename = secure_filename(file.filename)
         file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-        message= ocr_function(filename)
-        # print('upload_image filename: ' + filename)
-        flash('Image successfully uploaded')
-        return render_template('index.html', filename=filename, message=message)
+        message = ocr_function(filename)
+        flash('Image successfully uploaded!')
+        return render_template('receipt.html', filename=filename, message=message)
     else:
         flash('Allowed image types are -> png, jpg, jpeg, gif')
         return redirect(request.url)
@@ -46,15 +56,14 @@ def upload_image():
 
 @app.route('/display/<filename>')
 def display_image(filename):
-    # print('display_image filename: ' + filename)
     return redirect(url_for('static', filename='uploads/' + filename), code=301)
 
 
 @app.route('/ocr<filename>')
 def ocr(filename):
     message = ocr_function()
-    return render_template("index.html", message=message)
+    return render_template("receipt.html", message=message)
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)

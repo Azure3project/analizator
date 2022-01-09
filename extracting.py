@@ -1,5 +1,5 @@
 prime = 257
-mod = [10**9 + 7, 998244353]
+mod = [10 ** 9 + 7, 998244353]
 powers = []
 products = []
 products_hash = []
@@ -12,6 +12,7 @@ def init_hash():
         for i in range(1000):
             powers[m].append((powers[m][-1] * prime) % mod[m])
 
+
 def compute_hash_table(txt):
     result = [[] for _ in range(len(mod))]
     for i in range(len(mod)):
@@ -21,6 +22,7 @@ def compute_hash_table(txt):
             else:
                 result[i].append(((result[i][-1] * prime) % mod[i]) + ord(c) % mod[i])
     return result
+
 
 def compute_hash(txt):
     result = []
@@ -34,6 +36,7 @@ def compute_hash(txt):
                 result[-1] %= mod[m]
     return result
 
+
 def extract_hash(text_hash, l, r):
     if l > 0:
         res = [0, 0]
@@ -43,30 +46,35 @@ def extract_hash(text_hash, l, r):
         res = [text_hash[0][r], text_hash[1][r]]
     return res
 
+
 def compare_hash(hash1, hash2):
     for i in range(len(hash1)):
         if hash1[i] != hash2[i]:
             return False
     return True
 
+
 def preprocess(tmp):
-    subs = {'ą' : 'a', 'ę' : 'e', 'ś' : 's', 'ć' : 'c', 'ź' : 'z', 'ż' : 'z', 'ó' : 'o', 'ń' : 'n', 'ł' : 'l'}
+    subs = {'ą': 'a', 'ę': 'e', 'ś': 's', 'ć': 'c', 'ź': 'z', 'ż': 'z', 'ó': 'o', 'ń': 'n', 'ł': 'l'}
     tmp = list(tmp.lower())
     tmp = [c if c not in subs else subs[c] for c in tmp]
     return ''.join(tmp)
 
+
 def read_list():
     global products, products_hash
-    with open('produkty.list', encoding = 'utf-8') as file:
+    with open('produkty.list', encoding='utf-8') as file:
         for line in file:
             products.append(preprocess(line.rstrip()))
     products = list(dict.fromkeys(products))
-    products.sort(key = len, reverse = True)
+    products.sort(key=len, reverse=True)
     products_hash = [compute_hash(product) for product in products]
+
 
 def init_extracting():
     init_hash()
     read_list()
+
 
 def extract_products(text):
     text = preprocess(text.lower())
