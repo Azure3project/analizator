@@ -11,7 +11,7 @@ Authenticate
 Authenticates your credentials and creates a client.
 '''
 # to trzeba ukryć
-subscription_key = os.environ.get('SKEY')
+subscription_key = os.environ.get('SUKEY')
 endpoint = 'https://project3-analizator-paragonow.cognitiveservices.azure.com/'
 
 
