@@ -160,12 +160,15 @@ def extract_products(text):
                     for i in Other_products:
                         if i == product:
                             days = inf
+                    days = inf
                 
-                if days != inf:
+                if days == -1:
+                    print(f'I found {product} on the list. I could not establish its expiration date.')
+                elif days == inf:
+                    print(f'I found {product} on the list. It does not expire.')
+                else
                     expiration_date = current_date + timedelta(days)
                     print(f'I found {product} on the list. Its expiration date is {expiration_date}.')
-                else:
-                    print(f'I found {product} on the list. It does not expire.')
                 
                 for i in range(pos, pos + len(product)):
                     found[i] = True
