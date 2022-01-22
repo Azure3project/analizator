@@ -34,8 +34,7 @@ def ocr_function(filename):
     operation_id = read_operation_location.split("/")[-1]
 
     MYSECRET= os.environ.get("MYSECRET")
-    message = MYSECRET
-    #"You bought: "
+    message = = "You bought: "
 
     # Call the "GET" API and wait for it to retrieve the results
     while True:
