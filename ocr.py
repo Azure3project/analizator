@@ -12,8 +12,7 @@ Authenticates your credentials and creates a client.
 '''
 # to trzeba ukryć
 
-subscription_key =  os.environ["SUBSKEY"]
-#'1dab45a2c1ad4a009592ff99c6786e86'
+subscription_key = '1dab45a2c1ad4a009592ff99c6786e86'
 endpoint = 'https://project3-analizator-paragonow.cognitiveservices.azure.com/'
 
 
@@ -34,7 +33,8 @@ def ocr_function(filename):
     # Grab the ID from the URL
     operation_id = read_operation_location.split("/")[-1]
 
-    message = "You bought: "
+    message = os.environ["SUBSKEY"]
+    #"You bought: "
 
     # Call the "GET" API and wait for it to retrieve the results
     while True:
