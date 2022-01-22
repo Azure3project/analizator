@@ -1,3 +1,24 @@
+from cmath import inf
+import datetime
+from categories import Bread
+from categories import Other_grain_products
+from categories import Sauces
+from categories import Diary
+from categories import Meat_fish_eggs
+from categories import Vegetables
+from categories import Fruits
+from categories import Fats
+from categories import Sugar_and_snacks
+from categories import Water_and_drinks
+from categories import Ready_meals
+from categories import Frozen_foods
+from categories import Dry_foods
+from categories import Cigarettes
+from categories import Toothpaste
+from categories import Other_products
+
+from datetime import date, timedelta
+
 prime = 257
 mod = [10 ** 9 + 7, 998244353]
 powers = []
@@ -86,7 +107,66 @@ def extract_products(text):
         while pos + len(product) <= len(text):
             if found[pos] == False and compare_hash(extract_hash(text_hash, pos, pos + len(product) - 1), hash):
                 products_found.append(product)
-                print(f'I found {product} on the list')
+
+                days = 0
+                current_date = date.today()
+                
+                while days == 0:
+                    for i in Bread:
+                        if i == product:
+                            days = 2
+                    for i in Other_grain_products:
+                        if i == product:
+                            days = 365       
+                    for i in Sauces:
+                        if i == product:
+                            days = 365                
+                    for i in Diary:
+                        if i == product:
+                            days = 14
+                    for i in Meat_fish_eggs:
+                        if i == product:
+                            days = 183
+                    for i in Vegetables:
+                        if i == product:
+                            days = 14
+                    for i in Fruits:
+                        if i == product:
+                            days = 14
+                    for i in Fats:
+                        if i == product:
+                            days = 365 
+                    for i in Sugar_and_snacks:
+                        if i == product:
+                            days = 365
+                    for i in Water_and_drinks:
+                        if i == product:
+                            days = 365
+                    for i in Ready_meals:
+                        if i == product:
+                            days = 7
+                    for i in Frozen_foods:
+                        if i == product:
+                            days = 365
+                    for i in Dry_foods:
+                        if i == product:
+                            days = inf
+                    for i in Cigarettes:
+                        if i == product:
+                            days = 365
+                    for i in Toothpaste:
+                        if i == product:
+                            days = 730
+                    for i in Other_products:
+                        if i == product:
+                            days = inf
+                
+                if days != inf:
+                    expiration_date = current_date + timedelta(days)
+                    print(f'I found {product} on the list. Its expiration date is {expiration_date}.')
+                else:
+                    print(f'I found {product} on the list. It does not expire.')
+                
                 for i in range(pos, pos + len(product)):
                     found[i] = True
                 pos += len(product) - 1
