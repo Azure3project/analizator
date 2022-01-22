@@ -33,7 +33,8 @@ def ocr_function(filename):
     # Grab the ID from the URL
     operation_id = read_operation_location.split("/")[-1]
 
-    message = os.environ["SUBSKEY"]
+    MYSECRET= os.environ.get("MYSECRET")
+    message = MYSECRET
     #"You bought: "
 
     # Call the "GET" API and wait for it to retrieve the results
