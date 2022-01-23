@@ -14,12 +14,8 @@ Every shop has the same names for every products. In this case our app could rec
 
 2. 
 Many shops have their own app, for example Lidl has app where our receipts are stored.
+<img src="materials/lidl1.jpg" width="4">
 
-<div style="width: 2%; height: 2%">
-  
-  ![](materials/lidl1.jpg)
-  
-</div>
 
 
 It will be really easy to add our module for their app! Customers could have automatically updated e-fridge in their app.
