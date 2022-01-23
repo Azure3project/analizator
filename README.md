@@ -15,10 +15,9 @@ Every shop has the same names for every products. In this case our app could rec
 2. 
 Many shops have their own app, for example Lidl has app where our receipts are stored.
 
-<div style="width: 20%; height: 20%">
+<div style="width: 2%; height: 2%">
   
   ![](materials/lidl1.jpg)
-  ![](materials/lidl2.jpg)
   
 </div>
 
