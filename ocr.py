@@ -11,8 +11,8 @@ Authenticate
 Authenticates your credentials and creates a client.
 '''
 # to trzeba ukryć
-subscription_key = '1dab45a2c1ad4a009592ff99c6786e86'
-endpoint = 'https://project3-analizator-paragonow.cognitiveservices.azure.com/'
+subscription_key = '67c460f4f56a480585a0e104491dd35b'
+endpoint = 'https://receiptanalyzer.cognitiveservices.azure.com/'
 
 
 def ocr_function(filename):
