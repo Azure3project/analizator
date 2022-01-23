@@ -46,7 +46,7 @@ def upload_image():
     if file and allowed_file(file.filename):
         filename = secure_filename(file.filename)
         file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-        message = ocr_function(filename)
+      #  message = ocr_function(filename)
         flash('Image successfully uploaded!')
         return render_template('receipt.html', filename=filename, message=message)
     else:
@@ -61,7 +61,7 @@ def display_image(filename):
 
 @app.route('/ocr<filename>')
 def ocr(filename):
-    message = ocr_function()
+  #  message = ocr_function()
     return render_template("receipt.html", message=message)
 
 
