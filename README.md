@@ -92,9 +92,43 @@ Documentation: https://flask.palletsprojects.com/en/2.0.x/
 <a name="user-guide"/></a>
 ## User Guide
 
+After starting our web application from the link provided or locally, we will see the following screen:
+
+![image](https://user-images.githubusercontent.com/92271405/150877995-96e4b77b-c052-4662-8ba5-88bc471e1208.png)
+
+From here we can either check what products are in our _fridge_ or upload a new receipt to our database and thus add new products to our _fridge_!
+
+Let’s begin by adding a new receipt. In order to do that we have to choose _Add a new receipt_ option, and then add a proper image of our receipt. We can repeat the process with all the receipts we have.
+
+![image](https://user-images.githubusercontent.com/92271405/150878046-5ea75062-e661-4292-a82d-a9be11a3cc16.png)
+
+Once we upload a receipt, we can click on _Check_ button in order to see what products are on the receipt and they will be added to our _fridge_ automatically.
+
+![image](https://user-images.githubusercontent.com/92271405/150878063-52aeb163-b376-42a3-aa70-cfc7def707e9.png)
+
+![image](https://user-images.githubusercontent.com/92271405/150878075-915584e5-892d-4e45-86fe-05a7ae2dc15e.png)
+
+Now we can go back to the start page and click on _What is in my fridge?_ Button. We will see that there is a list of the products from our receipts sorted by their use-by date.
+
+![image](https://user-images.githubusercontent.com/92271405/150878107-0381e85c-19ef-4226-8bb6-587e98dba6b9.png)
+
+There is also an alternative option of adding products. We can see that at the bottom of the list that shows us all the products from our _fridge_, there’s a button called _Add new product_. After clicking this button, we can add our products manually – we will see two fields: _Product name_ and _Expire date_. In the first field, we can add the name of the product, and in the second one, we set its expiration date.
+
+![image](https://user-images.githubusercontent.com/92271405/150878137-f6ff8a9f-f7d1-4fd5-ad35-436a5a19552d.png)
+
+![image](https://user-images.githubusercontent.com/92271405/150878157-d6fd44c2-a39f-4d9b-a5de-7df5cb74cdeb.png)
+
+After clicking _Add product_ button, we will be redirected to our _fridge_, and we will be able to see this new product there (marked in yellow):
+
+![image](https://user-images.githubusercontent.com/92271405/150878176-e793308e-d226-4145-aa73-f56ed0a55461.png)
+
 <a name="demo"/></a>
 ## Demo
- 
+
+By clicking the picture below, you will be redirected to the YouTube video of the demo that was prepared for this project.
+
+ ![food_waste](https://user-images.githubusercontent.com/92271405/150878760-26cd2cec-8891-4b14-8bdd-dc34b6d2ae50.png)
+
  <a name="innovation"/></a>
 ## How to implement this innovation in real life?
 
