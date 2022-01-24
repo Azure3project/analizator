@@ -30,6 +30,7 @@ According to the UN report, on average each person throws away 74 kg of food pro
 
 <a name="functionality"/></a>
 ## Functionality description
+The web application allows you to add and store products in a virtual fridge. In addition to the names of the products, the use-by date of the individual products is also displayed. There are two ways to add ingredients. The first one allows you to add a photo of the sales receipt, then, using OCR, the names of products are extracted from the receipt, appropriate expiration dates are assigned and placed in the fridge. The second way is to manually add products, just enter the product name and the expiration date of the product. The products in the fridge are sorted by their use-by date.
 
 <a name="architecture"/></a>
 ## Architecture
