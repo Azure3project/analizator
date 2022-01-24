@@ -30,6 +30,7 @@ According to the UN report, on average each person throws away 74 kg of food pro
 
 <a name="functionality"/></a>
 ## Functionality description
+The web application allows you to add and store products in a virtual fridge. In addition to the names of the products, the use-by date of the individual products is also displayed. There are two ways to add ingredients. The first one allows you to add a photo of the sales receipt, then, using OCR, the names of products are extracted from the receipt, appropriate expiration dates are assigned and placed in the fridge. The second way is to manually add products, just enter the product name and the expiration date of the product. The products in the fridge are sorted by their use-by date.
 
 <a name="architecture"/></a>
 ## Architecture
@@ -55,7 +56,7 @@ We have three solutions:
 2. Many shops have their own app, for example Lidl has app where our receipts are stored. It will be really easy to add our module for their app! Customers could have automatically updated e-fridge in their app.
 
 <p align="center">
- <img src="materials/lidl1.png"/>
+ <img src="app/materials/lidl1.png"/>
  </p>
 
 3. We have also one more idea which could help everyone control products' terms of validity even if this person don't have spartphone or computer! During scanning of purchases system could sort them by terms of validity. Then, person at home just takes a look for the top of receipt and will know what to eat first.
