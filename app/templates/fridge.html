@@ -19,7 +19,31 @@
                     <div class="row">
                         <header>
                             <h1 class="text-center">What is in my fridge?</h1>
+                            <h5 class="text-center">A list of the products in your fridge is displayed below. They are sorted by date.</h5>
                         </header>
+
+            {% for product in products.items %}
+                <article class="media content-section">
+                  <div class="media-body">
+                      <p class="mr-2">{{ product.product_name }} <b>{{ product.expire_date}}</b></p>
+                  </div>
+                </article>
+            {% endfor %}
+            {% for page_nr in products.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
+                {% if page_nr %}
+                    {% if products.page == page_nr %}
+                        <a class="btn btn-outline-warning mb-4" href="{{ url_for('my_fridge', page=page_nr) }}">{{ page_nr }}</a>
+                    {% else %}
+                        <a class="btn btn-warning mb-4" href="{{ url_for('my_fridge', page=page_nr) }}">{{ page_nr }}</a>
+                    {% endif %}
+                {% else %}
+                    ...
+                {% endif %}
+            {% endfor %}
+
+                        <div class="btn-toolbar justify-content-center" role="toolbar">
+                            <a type="button" class="btn btn-warning btn-bm" href="{{ url_for('add_product') }}">Add new product</a>
+                        </div>
                     </div>
                     </div>
                 </div>

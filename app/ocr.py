@@ -4,7 +4,7 @@ import time
 from azure.cognitiveservices.vision.computervision import ComputerVisionClient
 from azure.cognitiveservices.vision.computervision.models import OperationStatusCodes
 from msrest.authentication import CognitiveServicesCredentials
-from extracting import extract_products
+from app.extracting import extract_products
 
 '''
 Authenticate
@@ -17,7 +17,7 @@ endpoint = 'https://receiptanalyzer.cognitiveservices.azure.com/'
 
 def ocr_function(filename):
     computervision_client = ComputerVisionClient(endpoint, CognitiveServicesCredentials(subscription_key))
-    print("===== Read File - remote =====")
+    #print("===== Read File - remote =====")
     # Get an image with text
 
     # Call API with URL and raw response (allows you to get the operation location)
@@ -46,11 +46,12 @@ def ocr_function(filename):
     if read_result.status == OperationStatusCodes.succeeded:
         for text_result in read_result.analyze_result.read_results:
             for line in text_result.lines:
-                print(line.text)
+                #print(line.text)
                 txt += line.text
 
     # extract_products returns a list of all products that have been found on the receipt
-    message += str(extract_products(txt))
+    products, dates = extract_products(txt)
+    message = str(products)
 
     return message
 
