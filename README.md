@@ -109,4 +109,4 @@ We have three solutions:
  <img src="app/materials/lidl1.png"/>
  </p>
 
-3. We have also one more idea which could help everyone control products' terms of validity even if this person don't have spartphone or computer! During scanning of purchases system could sort them by terms of validity. Then, person at home just takes a look for the top of receipt and will know what to eat first.
+3. We have also one more idea which could help everyone control products' terms of validity even if this person don't have smartphone or computer! During scanning of purchases system could sort them by terms of validity. Then, person at home just takes a look for the top of receipt and will know what to eat first.
