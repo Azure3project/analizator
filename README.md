@@ -39,6 +39,42 @@ Tutaj trzeba dodać diagram
 <a name="tech-stack"/></a>
 ## Tech Stack
 
+ <p align="center">
+ <img src="app/materials/appservice.png"/>
+ </p>
+ 
+Quickly and easily create enterprise-ready web and mobile apps for any platform or device, and deploy them on a scalable and reliable cloud infrastructure.
+ 
+Documentation: https://azure.microsoft.com/en-us/services/app-service/#documentation
+Pricing: https://azure.microsoft.com/en-us/services/app-service/#pricing
+
+ <p align="center">
+ <img src="app/materials/computervision.png"/>
+ </p>
+ 
+An AI service that analyzes content in images and video
+ 
+Documentation: https://docs.microsoft.com/en-us/azure/cognitive-services/computer-vision/
+Pricing: https://azure.microsoft.com/en-us/services/cognitive-services/computer-vision/#pricing
+ 
+ 
+ <p align="center">
+ <img src="app/materials/keyvault.png"/>
+ </p>
+ 
+Safeguard cryptographic keys and other secrets used by cloud apps and services
+ 
+Documentation: https://azure.microsoft.com/en-us/services/key-vault/#documentation
+Pricing: https://azure.microsoft.com/en-us/pricing/details/key-vault/
+
+ <p align="center">
+ <img src="app/materials/flask.png"/>
+ </p>
+ 
+ Flask is a micro web framework written in Python. Flask depends on the Jinja template engine and the Werkzeug WSGI toolkit. 
+ 
+Documentation: https://flask.palletsprojects.com/en/2.0.x/
+
 <a name="user-guide"/></a>
 ## User Guide
 
