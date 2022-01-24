@@ -39,6 +39,8 @@ Tutaj trzeba dodać diagram
 <a name="tech-stack"/></a>
 ## Tech Stack
 
+### Azure App Service Web Apps
+
  <p align="center">
  <img src="app/materials/appservice.png"/>
  </p>
@@ -48,16 +50,26 @@ Quickly and easily create enterprise-ready web and mobile apps for any platform 
 Documentation: https://azure.microsoft.com/en-us/services/app-service/#documentation
 Pricing: https://azure.microsoft.com/en-us/services/app-service/#pricing
 
+### Azure Cognitive Services Computer Vision 
+
  <p align="center">
  <img src="app/materials/computervision.png"/>
  </p>
  
 An AI service that analyzes content in images and video
- 
+
 Documentation: https://docs.microsoft.com/en-us/azure/cognitive-services/computer-vision/
 Pricing: https://azure.microsoft.com/en-us/services/cognitive-services/computer-vision/#pricing
  
- 
+### Azure Cognitive Services Computer Vision Optical Character Recognition
+
+The Optical Character Recognition (OCR) service extracts text from images. You can use the new Read API to extract printed and handwritten text from photos and documents. It uses deep-learning-based models and works with text on a variety of surfaces and backgrounds. These include business documents, invoices, receipts, posters, business cards, letters, and whiteboards. 
+
+Quickstart: https://docs.microsoft.com/en-us/azure/cognitive-services/computer-vision/quickstarts-sdk/client-library?tabs=visual-studio
+Language support: https://docs.microsoft.com/en-us/azure/cognitive-services/computer-vision/language-support
+
+### Azure Key Vault
+
  <p align="center">
  <img src="app/materials/keyvault.png"/>
  </p>
@@ -66,6 +78,8 @@ Safeguard cryptographic keys and other secrets used by cloud apps and services
  
 Documentation: https://azure.microsoft.com/en-us/services/key-vault/#documentation
 Pricing: https://azure.microsoft.com/en-us/pricing/details/key-vault/
+
+### Flask
 
  <p align="center">
  <img src="app/materials/flask.png"/>
