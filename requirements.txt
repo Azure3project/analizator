@@ -3,5 +3,5 @@ msrest~=0.6.21
 Werkzeug~=2.0.2
 azure-identity~=1.7.1
 azure-cognitiveservices-vision-computervision~=0.9.0
-azure-keyvault-secrets~-4.3.0
+azure-keyvault-secrets~=4.3.0
 WTForms~=3.0.1
