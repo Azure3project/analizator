@@ -1,18 +1,36 @@
 import os
+from os import environ as env
 import time
 
 from azure.cognitiveservices.vision.computervision import ComputerVisionClient
 from azure.cognitiveservices.vision.computervision.models import OperationStatusCodes
 from msrest.authentication import CognitiveServicesCredentials
 from app.extracting import extract_products
+from azure.identity import ClientSecretCredential
+from azure.keyvault.secrets import SecretClient
 
+TENANT_ID = os.environ["AZURE_TENANT_ID"]
+CLIENT_ID = os.environ["AZURE_CLIENT_ID"]
+CLIENT_SECRET = os.environ["AZURE_CLIENT_SECRET"]
+
+KEYVAULT_NAME = os.environ["AZURE_KEYVAULT_NAME"]
+KEYVAULT_URI = f"https://{KEYVAULT_NAME}.vault.azure.net/"
+
+_credential = ClientSecretCredential(
+    tenant_id=TENANT_ID,
+    client_id=CLIENT_ID,
+    client_secret=CLIENT_SECRET
+)
+
+_sc = SecretClient(vault_url=KEYVAULT_URI, credential=_credential)
+OUR_SUBSCRIPTION_KEY = _sc.get_secret("subscriptionKey").value
+OUR_ENDPOINT= _sc.get_secret("endpoint").value
 '''
 Authenticate
 Authenticates your credentials and creates a client.
 '''
-# to trzeba ukryć
-subscription_key = '67c460f4f56a480585a0e104491dd35b'
-endpoint = 'https://receiptanalyzer.cognitiveservices.azure.com/'
+subscription_key = OUR_SUBSCRIPTION_KEY
+endpoint = OUR_ENDPOINT
 
 
 def ocr_function(filename):
