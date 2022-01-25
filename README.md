@@ -34,7 +34,9 @@ The web application allows you to add and store products in a virtual fridge. In
 
 <a name="architecture"/></a>
 ## Architecture
-![Diagram](https://raw.githubusercontent.com/Azure3project/analizator/main/azure3_diagram.png)
+<p align="center">
+<img src="https://raw.githubusercontent.com/Azure3project/analizator/main/azure3_diagram.png"/>
+ </p>
 
 <a name="tech-stack"/></a>
 ## Tech Stack
@@ -56,7 +58,7 @@ Pricing: https://azure.microsoft.com/en-us/services/app-service/#pricing
  <img src="app/materials/computervision.png"/>
  </p>
  
-An AI service that analyzes content in images and video
+An AI service that analyzes content in images and video.
 
 Documentation: https://docs.microsoft.com/en-us/azure/cognitive-services/computer-vision/
 Pricing: https://azure.microsoft.com/en-us/services/cognitive-services/computer-vision/#pricing
@@ -74,7 +76,7 @@ Language support: https://docs.microsoft.com/en-us/azure/cognitive-services/comp
  <img src="app/materials/keyvault.png"/>
  </p>
  
-Safeguard cryptographic keys and other secrets used by cloud apps and services
+Safeguard cryptographic keys and other secrets used by cloud apps and services.
  
 Documentation: https://azure.microsoft.com/en-us/services/key-vault/#documentation
 Pricing: https://azure.microsoft.com/en-us/pricing/details/key-vault/
@@ -94,34 +96,50 @@ Documentation: https://flask.palletsprojects.com/en/2.0.x/
 
 After starting our web application from the link provided or locally, we will see the following screen:
 
-![image](https://user-images.githubusercontent.com/92271405/150877995-96e4b77b-c052-4662-8ba5-88bc471e1208.png)
-
+<p align="center">
+<img src="https://user-images.githubusercontent.com/92271405/150877995-96e4b77b-c052-4662-8ba5-88bc471e1208.png"/>
+</p>
+ 
 From here we can either check what products are in our _fridge_ or upload a new receipt to our database and thus add new products to our _fridge_!
 
 Let’s begin by adding a new receipt. In order to do that we have to choose _Add a new receipt_ option, and then add a proper image of our receipt. We can repeat the process with all the receipts we have.
 
-![image](https://user-images.githubusercontent.com/92271405/150878046-5ea75062-e661-4292-a82d-a9be11a3cc16.png)
-
+<p align="center">
+<img src="https://user-images.githubusercontent.com/92271405/150878046-5ea75062-e661-4292-a82d-a9be11a3cc16.png"/>
+</p>
+  
 Once we upload a receipt, we can click on _Check_ button in order to see what products are on the receipt and they will be added to our _fridge_ automatically.
 
-![image](https://user-images.githubusercontent.com/92271405/150878063-52aeb163-b376-42a3-aa70-cfc7def707e9.png)
-
-![image](https://user-images.githubusercontent.com/92271405/150878075-915584e5-892d-4e45-86fe-05a7ae2dc15e.png)
-
+<p align="center">
+<img src="https://user-images.githubusercontent.com/92271405/150878063-52aeb163-b376-42a3-aa70-cfc7def707e9.png"/>
+</p>
+ 
+<p align="center">
+ <img src="https://user-images.githubusercontent.com/92271405/150878075-915584e5-892d-4e45-86fe-05a7ae2dc15e.png"/>
+</p>
+ 
 Now we can go back to the start page and click on _What is in my fridge?_ Button. We will see that there is a list of the products from our receipts sorted by their use-by date.
 
-![image](https://user-images.githubusercontent.com/92271405/150878107-0381e85c-19ef-4226-8bb6-587e98dba6b9.png)
-
+<p align="center">
+ <img src="https://user-images.githubusercontent.com/92271405/150878107-0381e85c-19ef-4226-8bb6-587e98dba6b9.png"/>
+</p>
+ 
 There is also an alternative option of adding products. We can see that at the bottom of the list that shows us all the products from our _fridge_, there’s a button called _Add new product_. After clicking this button, we can add our products manually – we will see two fields: _Product name_ and _Expire date_. In the first field, we can add the name of the product, and in the second one, we set its expiration date.
 
-![image](https://user-images.githubusercontent.com/92271405/150878137-f6ff8a9f-f7d1-4fd5-ad35-436a5a19552d.png)
-
-![image](https://user-images.githubusercontent.com/92271405/150878157-d6fd44c2-a39f-4d9b-a5de-7df5cb74cdeb.png)
-
+<p align="center">
+<img src="https://user-images.githubusercontent.com/92271405/150878137-f6ff8a9f-f7d1-4fd5-ad35-436a5a19552d.png"/>
+</p>
+ 
+<p align="center">
+<img src="https://user-images.githubusercontent.com/92271405/150878157-d6fd44c2-a39f-4d9b-a5de-7df5cb74cdeb.png"/>
+</p>
+ 
 After clicking _Add product_ button, we will be redirected to our _fridge_, and we will be able to see this new product there (marked in yellow):
 
-![image](https://user-images.githubusercontent.com/92271405/150878176-e793308e-d226-4145-aa73-f56ed0a55461.png)
-
+<p align="center">
+<img src="https://user-images.githubusercontent.com/92271405/150878176-e793308e-d226-4145-aa73-f56ed0a55461.png"/>
+</p>
+ 
 <a name="demo"/></a>
 ## Demo
 
@@ -129,7 +147,7 @@ By clicking the picture below, you will be redirected to the YouTube video of th
 
 [![food_waste](https://user-images.githubusercontent.com/92271405/150878760-26cd2cec-8891-4b14-8bdd-dc34b6d2ae50.png)](https://www.youtube.com/watch?v=J_W88RXkb1A)
 
- <a name="innovation"/></a>
+<a name="innovation"/></a>
 ## How to implement this innovation in real life?
 
 We have three solutions:
@@ -140,7 +158,7 @@ We have three solutions:
 2. Many shops have their own app, for example Lidl has app where our receipts are stored. It will be really easy to add our module for their app! Customers could have automatically updated e-fridge in their app.
 
 <p align="center">
- <img src="app/materials/lidl1.png"/>
- </p>
+<img src="app/materials/lidl1.png"/>
+</p>
 
 3. We have also one more idea which could help everyone control products' terms of validity even if this person doesn't have smartphone or computer! During scanning of purchases system could sort them by terms of validity. Then, person at home just takes a look for the top of receipt and will know what to eat first.
