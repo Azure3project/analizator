@@ -127,7 +127,7 @@ After clicking _Add product_ button, we will be redirected to our _fridge_, and 
 
 By clicking the picture below, you will be redirected to the YouTube video of the demo that was prepared for this project.
 
- ![food_waste](https://user-images.githubusercontent.com/92271405/150878760-26cd2cec-8891-4b14-8bdd-dc34b6d2ae50.png)
+[![food_waste](https://user-images.githubusercontent.com/92271405/150878760-26cd2cec-8891-4b14-8bdd-dc34b6d2ae50.png)](https://www.youtube.com/watch?v=J_W88RXkb1A)
 
  <a name="innovation"/></a>
 ## How to implement this innovation in real life?
@@ -135,7 +135,7 @@ By clicking the picture below, you will be redirected to the YouTube video of th
 We have three solutions:
 
 
-1. Every shop has the same names for every products. In this case our app could recognize everything and could be use in every shop based  only on one "products dictonary".
+1. Every shop has the same names for every products. In this case our app could recognize everything and could be use in every shop based only on one "products dictonary".
 
 2. Many shops have their own app, for example Lidl has app where our receipts are stored. It will be really easy to add our module for their app! Customers could have automatically updated e-fridge in their app.
 
