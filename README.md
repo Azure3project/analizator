@@ -162,3 +162,46 @@ We have three solutions:
 </p>
 
 3. We have also one more idea which could help everyone control products' terms of validity even if this person doesn't have smartphone or computer! During scanning of purchases system could sort them by terms of validity. Then, person at home just takes a look for the top of receipt and will know what to eat first.
+
+<a name="task-list"/></a>
+## Task List
+
+1. TODO by **31.12.2021**:
+* **Patryk Guba**:
+    * [x] Create a receipt database
+* **Martyna Jakubowska & Aleksandra Kowalczyk**:
+    * [x] Create application’s framework
+    * [x] Add OCR
+    * [x] Connect to App Service
+* **Maxymilian Kowalski**:
+    * [x] Create a module in Python that would convert text from a receipt into a list of products
+    * [x] Create a list of products from the receipt database
+
+2. TODO by **11.01.2022**:
+* **Kinga Kocoł**:
+    * [x] Create a GUI (Home page with separate links to virtual fridge and page with receipt analyzer)
+* **Aleksander Wodnicki**:
+    * [x] Create a module in Python that would be setting expiration date to particular products
+    * [x] Classify products into their categories (and set expiry date to them)
+
+3. TODO by **25.11.2022**:
+* **Patryk Guba**:
+    * [x] Create Architecture Diagram 
+* **Martyna Jakubowska**:
+    * [x] Fix problems related to Azure
+    * [x] Record a demo
+* **Kinga Kocoł**:
+    * [x] GUI adjustments
+    * [x] Enable user to see the products in the fridge
+    * [x] Add a form to add products manually
+    * [x] Create a detailed description of a project on GitHub
+    * [x] Prepare demo’s script
+* **Aleksandra Kowalczyk**:
+    * [x] Integrate with Key Vault
+    * [x] Describe Tech Stack and Innovation's Implementation on GitHub
+    * [x] Record a demo
+* **Aleksander Wodnicki**:
+    * [x] Prepare demo’s script
+    * [x] Record and edit a demo
+    * [x] Prepare English transcript of the demo
+    * [x] Prepare User Guide and Task List on GitHub
